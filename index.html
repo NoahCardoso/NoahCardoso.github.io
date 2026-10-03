@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noah Cardoso</title>
+<meta name="description" content="Noah Cardoso is a software engineering student who builds backend systems, APIs, and developer tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* ---- EDIT YOUR COLORS HERE ---- */
+  :root {
+    --bg: #000;
+    --text: #f2f2f2;
+    --muted: #8f8f8f;
+    --line: #2a2a2a;
+    --accent: #fff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 0.95rem/1.7 "Space Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  a { color: inherit; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(0,0,0,.88); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; height: 3.5rem; }
+  header .logo { font-weight: 700; text-decoration: none; }
+  nav { display: flex; gap: 1.5rem; }
+  nav a { text-decoration: none; color: var(--muted); }
+  nav a:hover { color: var(--text); }
+
+  .hero { padding: 6rem 0 3rem; }
+  h1 { font-size: clamp(1.7rem, 5vw, 2.6rem); line-height: 1.2; margin: 0 0 2rem; font-weight: 700; letter-spacing: -0.02em; }
+  .hero p { max-width: 62ch; color: #cfcfcf; margin: 0 0 1.2rem; }
+  .links { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
+
+  section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.1rem; margin: 0 0 2.5rem; font-weight: 700; }
+
+  .project { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; margin-bottom: 4.5rem; }
+  .project:nth-of-type(even) .shot { order: 2; }
+  .project:nth-of-type(even) .info { text-align: right; }
+  .project:nth-of-type(even) .stack { justify-content: flex-end; }
+  .shot {
+    aspect-ratio: 4 / 3; background: #0d0d0d; border: 1px solid var(--line); border-radius: 6px;
+    display: grid; place-items: center; overflow: hidden; color: var(--muted); font-size: .8rem; text-align: center; padding: 1rem;
+  }
+  .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .info h3 { margin: 0 0 .4rem; font-size: 1.3rem; }
+  .info p { margin: 0 0 .8rem; color: #cfcfcf; }
+  .stack { display: flex; flex-wrap: wrap; gap: .4rem 1rem; color: var(--muted); font-size: .8rem; margin: 0; padding: 0; list-style: none; }
+
+  .job { display: grid; grid-template-columns: 11rem 1fr; gap: 1.5rem; margin-bottom: 2.5rem; }
+  .job .when { color: var(--muted); font-size: .85rem; }
+  .job h3 { margin: 0; font-size: 1.05rem; }
+  .job .where { color: var(--muted); margin: 0 0 .6rem; }
+  .job ul { margin: 0; padding-left: 1.1rem; color: #cfcfcf; }
+  .job li { margin-bottom: .3rem; }
+
+  .btn {
+    display: inline-block; border: 1px solid var(--text); padding: .6rem 1.2rem; text-decoration: none; border-radius: 4px;
+  }
+  .btn:hover { background: var(--text); color: var(--bg); }
+  footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--muted); font-size: .85rem; }
+
+  @media (max-width: 700px) {
+    nav { gap: 1rem; font-size: .85rem; }
+    .hero { padding-top: 3.5rem; }
+    .project { grid-template-columns: 1fr; gap: 1.2rem; margin-bottom: 3rem; }
+    .project:nth-of-type(even) .shot { order: 0; }
+    .project:nth-of-type(even) .info { text-align: left; }
+    .project:nth-of-type(even) .stack { justify-content: flex-start; }
+    .job { grid-template-columns: 1fr; gap: .3rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">noah cardoso</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#resume">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ABOUT: replace the text below with your own -->
+  <div class="wrap hero" id="about">
+    <h1>Software engineering<br>student building reliable<br>backend systems &amp; tools.</h1>
+    <p>Hi, I'm Noah Cardoso, a software engineering student at McMaster University in Hamilton, ON. I've worked on CRM data tools, automated testing, and compiler development, and I enjoy backend systems, APIs, and the tooling that makes developers faster.</p>
+    <p>I'm looking for [the kind of role you want, and when you can start]. If you'd like to work together, get in touch.</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/noah-cardoso">LinkedIn</a>
+      <a href="https://github.com/NoahCardoso">GitHub</a>
+      <a href="mailto:ncardoso20@outlook.com">Email</a>
+      <a href="resume.pdf">Resume</a>
+    </div>
+  </div>
+
+  <!-- PROJECTS: copy one <article> block per project. Put screenshots in an images/ folder. -->
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <div class="shot"><img src="images/specgen.png" alt="Screenshot of SpecGen" onerror="this.replaceWith('Add images/specgen.png')"></div>
+        <div class="info">
+          <h3><a href="https://github.com/NoahCardoso/SpecGen">SpecGen</a></h3>
+          <p>A REST API that turns YAML specs, or a plain-English description, into a full Java Spring Boot project you can download as a ZIP.</p>
+          <ul class="stack"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>FreeMarker</li><li>IBM watsonx</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="shot"><img src="images/chitchat.png" alt="Screenshot of ChitChat" onerror="this.replaceWith('Add images/chitchat.png')"></div>
+        <div class="info">
+          <h3><a href="https://github.com/NoahCardoso/ChitChat">ChitChat</a></h3>
+          <p>A real-time chat app with secure login, built to handle 50+ concurrent users with sub-100ms message delivery.</p>
+          <ul class="stack"><li>Node.js</li><li>Express</li><li>Socket.IO</li><li>PostgreSQL</li><li>JWT</li></ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE: copy one .job block per role -->
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="when">Feb 2026 – Aug 2026</div>
+        <div>
+          <h3>Junior Software Developer</h3>
+          <p class="where">Pillar To Post Home Inspectors, Remote</p>
+          <ul>
+            <li>Built self-service CSV export tools in Django that replaced manual data-pull requests with on-demand reports.</li>
+            <li>Added Select2 brand autocomplete with server-side filtering and infinite scroll, speeding up search over the old static dropdown.</li>
+            <li>Wrote Python scripts to sync local environments with production and staging data on AWS.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Sept 2025 – Jan 2026</div>
+        <div>
+          <h3>Software Development Engineer in Test</h3>
+          <p class="where">Pillar To Post Home Inspectors, Remote</p>
+          <ul>
+            <li>Wrote Python test suites for backend workflows, REST APIs, and data pipelines, cutting manual testing effort by 40%.</li>
+            <li>Tested Salesforce and HubSpot integrations with Postman and Python, finding 15+ critical issues before release.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">May 2024 – Aug 2024</div>
+        <div>
+          <h3>Software Developer</h3>
+          <p class="where">McMaster Research (Drasil Project), Hamilton, ON</p>
+          <ul>
+            <li>Implemented Set data structures in a Haskell DSL, enabling code generation for Python, Java, and C++.</li>
+            <li>Refactored arithmetic operators across 60+ files, reducing code duplication by 30%.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESUME: save your PDF as resume.pdf next to this file -->
+  <section id="resume">
+    <div class="wrap">
+      <h2>Resume</h2>
+      <a class="btn" href="resume.pdf">Open resume (PDF)</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="y"></span> Noah Cardoso</div>
+</footer>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
